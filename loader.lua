@@ -1292,3 +1292,7 @@ Section:Toggle("Enabled", function(Toggled)
 end)
 
 Section:Button("Win", win)
+
+Section:Button("Guess Random", function()
+	guess:InvokeServer(words[math.random(#words)])
+end)
