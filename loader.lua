@@ -1280,7 +1280,8 @@ Auto:Toggle("Enabled", function(Toggled)
 				local Started = false
 				task.spawn(function()
 					local C C = sync.OnClientEvent:Connect(function(tbl)
-						if tbl.data.gameStateAtom.canGuess then
+						local state = tbl.data.gameStateAtom
+						if state and state.canGuess then
 							Started = true
 							C:Disconnect()
 						end
