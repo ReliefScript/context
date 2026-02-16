@@ -1251,7 +1251,8 @@ local words = {
 	[1244] = "Fisherman",
 	[1245] = "Ant",
 	[1246] = "Sheriff",
-	[1247] = "Pomegranate"
+	[1247] = "Pomegranate",
+	[1248] = "Honeydew"
 }
 
 local function win()
