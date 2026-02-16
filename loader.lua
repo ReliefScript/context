@@ -1265,9 +1265,11 @@ local UI = getgenv().UI or loadstring(game:HttpGet("https://raw.githubuserconten
 
 local Window = UI:Window()
 local Tab = Window:Tab("Game")
-local Section = Tab:Section("Auto Guess")
 
-Section:Toggle("Enabled", function(Toggled)
+local Auto = Tab:Section("Auto Guess")
+local Util = Tab:Section("Util")
+
+Auto:Toggle("Enabled", function(Toggled)
 	if Toggled then
 		R = true
 		task.spawn(function()
@@ -1292,8 +1294,8 @@ Section:Toggle("Enabled", function(Toggled)
 	end
 end)
 
-Section:Button("Win", win)
+Util:Button("Win", win)
 
-Section:Button("Guess Random", function()
+Util:Button("Guess Random", function()
 	guess:InvokeServer(words[math.random(#words)])
 end)
